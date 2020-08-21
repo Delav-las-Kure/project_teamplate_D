@@ -1,0 +1,42 @@
+.pos {
+    &-static {
+        position: static
+    }
+    &-absolute {
+        position: absolute;
+    }
+    &-relative {
+        position: relative;
+    }
+    &-sticky {
+        position: sticky;
+    }
+    &-tl {
+        @extend %top;
+        @extend %left;
+    }
+    &-tr {
+        @extend %top;
+        @extend %right;
+    }
+    &-bl {
+        @extend %bottom;
+        @extend %left;
+    }
+    &-br {
+        @extend %bottom;
+        @extend %right;
+    }
+}
+.top, %top {
+    top: 0;
+}
+.left, %left {
+    left: 0;
+}
+.right, %right {
+    right: 0;
+}
+.bottom, %bottom {
+    right: 0;
+}

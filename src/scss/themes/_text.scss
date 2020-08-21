@@ -1,0 +1,75 @@
+.text {
+    @include responsive-property() {
+        &-uppercase {
+            text-transform: uppercase !important;
+        }
+        &-underline {
+            text-decoration: underline !important;
+        }
+        &-lowercase {
+            text-transform: lowercase !important;
+        }
+        &-capitalize {
+            text-transform: capitalize !important;
+        }
+        &-italic {
+            font-style: italic !important;
+        }
+        &-none {
+            text-transform: none !important;
+        }
+        &-nowrap {
+            white-space: nowrap !important;
+        }
+        &-center {
+            text-align: center !important;
+        }
+        &-left {
+            text-align: left !important;
+        }
+        &-right {
+            text-align: right !important;
+        }
+    }
+}
+
+.font {
+    &-weight-thin {
+        font-weight: 100 !important;
+    }
+    &-weight-light {
+        font-weight: 300 !important;
+    }
+    &-weight-regular {
+        font-weight: 400 !important;
+    }
+    &-weight-medium {
+        font-weight: 500 !important;
+    }
+    &-weight-semibold {
+        font-weight: 600 !important;
+    }
+    &-weight-bold {
+        font-weight: 700 !important;
+    }
+    &-weight-black {
+        font-weight: 900 !important;
+    }
+}
+.reset {
+    &-link[href], &-link a {
+        @include reset-link();
+    }
+    &-link--hover[href], &-link--hover a {
+        @include reset-link(true);
+    }
+}
+
+.float {
+    &-left {
+        float: left
+    }
+    &-right {
+        float: right
+    }
+}

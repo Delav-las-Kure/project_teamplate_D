@@ -1,0 +1,28 @@
+$grid-gutters: (
+    xxxs: 1px,
+    xxs: 2px,
+    xs: 5px,
+    sm: 10px,
+    md: 15px,
+    lg: 20px,
+    xl: 25px,
+    ml: 30px
+
+);
+@each $size, $val in $grid-gutters {
+    .row.gutter-#{$size} {
+        margin-left: -$val / 2;
+        margin-right: -$val / 2;
+        margin-bottom: -$val;
+        & > [class^="col"],
+        & > [class*=" col"] {
+            padding-left: $val / 2;
+            padding-right: $val / 2;
+            padding-bottom: $val;
+        }
+    }
+}
+.shrink {
+    flex-grow: 0;
+    flex-shrink: 0;
+}

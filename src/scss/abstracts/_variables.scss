@@ -1,0 +1,74 @@
+/**
+* PALETTE SETTINGS
+**/
+$c_white: #ffffff;
+$c_black: #000000;
+
+/***
+* CONSTS
+**/
+//font const
+$DEFAULT_FONT_FAMILY: "Montserrat";
+$DEFAULT_FONT_SIZE: 10px;
+$DEFAULT_FONT_SIZE_BODY: font-size(14px);
+$DEFAULT_LETTER_SPACING: 0px;
+$DEFAULT_TEXT_COLOR: $c_black;
+$DEFAULT_FONT_WEIGHT: normal;
+
+
+/**
+* TEXT SETTINGS
+**/
+$text-settings: (
+  'caption': ( // Smaller size text
+    font-size: font-size(12px),
+    font-weight: 500,
+    line-height: line-height(12px, 12px),
+  ),
+  'body': ( // regular
+    font-size: $DEFAULT_FONT_SIZE_BODY,
+    line-height: 1.2em,
+    font-weight: 400,
+    letter-spacing: letter-spacing(0)
+  ),
+  'subheading': ( //  good for supporting text
+    font-size: $DEFAULT_FONT_SIZE_BODY,
+    line-height: 1.2em,
+    font-weight: 500,
+  ),
+  'title': ( // as h6
+    font-size: $DEFAULT_FONT_SIZE_BODY,
+    line-height: line-height(16px, 14px),
+    font-weight: bold,
+  ),
+  'headline': ( // as h5
+    font-size: font-size(16px),
+    line-height: line-height(20px, 16px),
+    font-weight: 500,
+    letter-spacing: letter-spacing(0)
+  ),
+  'display-1': ( // as h4
+    font-size: font-size(16px),
+    line-height: line-height(20px, 16px),
+    font-weight: bold,
+    letter-spacing: letter-spacing(0)
+  ),
+  'display-2': ( // as h3
+    font-size: font-size(18px),
+    line-height: line-height(24px, 18px),
+    font-weight: 500,
+    letter-spacing: letter-spacing(0)
+  ),
+  'display-3': ( // as h2
+    font-size: font-size(24px),
+    line-height: line-height(28px, 24px),
+    font-weight: 500,
+    letter-spacing: letter-spacing(0)
+  ),
+  'display-4': ( // as h1
+    font-size: font-size(28px),
+    line-height: line-height(34px, 28px),
+    font-weight: bold,
+    letter-spacing: letter-spacing(0)
+  )
+);

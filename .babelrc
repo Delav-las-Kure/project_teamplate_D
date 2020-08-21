@@ -1,0 +1,17 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "modules": "commonjs",
+        "targets": {
+          "ie": 11,
+          "browsers": [
+            "last 2 versions",
+            "safari 10"
+          ]
+        }
+      }
+    ]
+  ]
+}

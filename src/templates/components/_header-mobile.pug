@@ -1,0 +1,41 @@
+#mobile-menu.header-mobile__menu(style="display: none")
+    ul
+        li
+            a(href="#") Test
+        li.current-menu-item
+            a(href="#") Test 2
+        if !auth
+            li
+                a(href="#")
+                    i.fas.fa-sign-in-alt
+                    | Login
+            li
+                a(href="#")
+                    i.fas.fa-user-plus
+                    | Register
+    ul.icon-top
+        li
+            a(href='#', target='_blank')
+                i.fab.fa-facebook-f
+        li
+            a(href='#', target='_blank')
+                i.fab.fa-twitter
+        li
+            a(href='#', target='_blank')
+                i.fab.fa-instagram
+    .header-mobile__tel
+        a(href='tel: 866-812-6190')
+            i.fas.fa-phone-alt.mr-3
+            | 111-111-1111
+    if !unauthorized
+        .header-mobile__auth-wrapper
+            .container-fluid
+                .row.gutter-lg.justify-content-center.align-items-center
+                    .col-auto
+                        a.header-mobile__link(href="#")
+                            i.fas.fa-cog
+                    .col-auto
+                        a.header-mobile__avatar(href="#" style="background-image: none")
+                    .col-auto
+                        a.header-mobile__link(href="#")
+                            i.fas.fa-users

@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+
+}
+html {
+  font-size: $DEFAULT_FONT_SIZE;
+}
+body {
+  font-family: $DEFAULT_FONT_FAMILY;
+  letter-spacing: $DEFAULT_LETTER_SPACING;
+  font-size: $DEFAULT_FONT_SIZE_BODY;
+  min-height: 100vh;
+  position: relative;
+}
+.all-wrapper {
+}
+img {
+    max-width: 100%;
+}
+
+@each $level, $map in $text-settings {
+  .#{$level} {
+      @include print($map)
+  }
+}
+h1 {
+  @include text-setting('display-4');
+}
+h2 {
+  @include text-setting('display-3');
+}
+h3 {
+  @include text-setting('display-2');
+}
+h4 {
+  @include text-setting('display-1');
+}
+h5 {
+  @include text-setting('headline');
+}
+h6 {
+  @include text-setting('title');
+}
+p {
+  @include text-setting('body');
+}
+a {
+
+}
