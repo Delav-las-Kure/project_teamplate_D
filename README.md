@@ -34,11 +34,11 @@ $ npm run serve
 1.  Embedded images and files in `` pug``.
     1.  Load ``img``:
         ```
-        img(src=require("./img/logo.png"), alt="")
+        img(src=require("./img/logo.png").default, alt="")
         ```
     2.   Load as ``background-image``:
             ```
-            div(style="background-image: url(" + require('./img/logo.png') + ")")
+            div(style="background-image: url(" + require('./img/logo.png').default + ")")
             ```
 2.  External modules.
     1.  All external scripts can be installed via `` npm i`` and connected already at the place of requirement, for example
