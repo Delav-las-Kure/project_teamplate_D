@@ -1,18 +1,24 @@
-﻿{
+{
   "compilerOptions": {
-    "target": "es5",
+    "baseUrl": ".",
+    "target": "es6",
+    "strictNullChecks": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "sourceMap": true,
-    "removeComments": false,
-    "noImplicitAny": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "outDir": "dist",
-    "rootDir": "src",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "paths": {
+      "@/*": ["src/*"]
+    },
   },
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
 }

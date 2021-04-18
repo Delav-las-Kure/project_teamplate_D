@@ -1,13 +1,12 @@
 /**
  * fonts
  */
-import "@fortawesome/fontawesome-free/css/all.min.css";
-import './fonts/OpenSans/stylesheet.css';
+import './fonts/OpenSans/stylesheet.css'
 
 /**
  * style lib
  */
-import "mmenu-js/dist/mmenu.css";
+import 'mmenu-js/dist/mmenu.css'
 
 /**
  * script lib
@@ -16,10 +15,10 @@ import "mmenu-js/dist/mmenu.css";
 /**
  * main style
  */
-import './scss/main.scss';
+import './scss/main.scss'
 
 /**
  * main script
  */
-import { MainApp } from './ts/main';
+import { MainApp } from './ts/main'
 console.info(MainApp())

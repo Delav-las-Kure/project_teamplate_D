@@ -1,79 +1,32 @@
-$grid-columns:      12;
-$grid-gutter-width: 30px;
-
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px
-);
+$container-header-width: 1660px;
+$container-content-width: 1300px;
 
 $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1140px
+  xl: 1140px,
 );
 
-$container-header-width: 1660px;
-$container-content-width: 1300px;
-
-@import "~bootstrap-4-grid/scss/grid/mixins/_breakpoints.scss";
-@import "~bootstrap-4-grid/scss/grid/mixins/_grid.scss";
+/**
+* responsive
+**/
 
 @mixin make-container-max-width($max-width: $container-content-width) {
   max-width: $max-width + $grid-gutter-width;
   @include make-container();
 }
 
-/**
-* responsive
-**/
-/*
-.site-header {
-    padding: 2rem;
-    font-size: 1.8rem;
-    @include mq('xl') {
-        padding-top: 4rem;
-        font-size: 2.4rem;
-    }
-}
-*/
-@mixin mq($width, $type: min) {
-    @if map_has_key($grid-breakpoints, $width) {
-        $width: map_get($grid-breakpoints, $width);
-        @if $type == max {
-            $width: $width - 1px;
-        }
-        @media only screen and (#{$type}-width: $width) {
-            @content;
-        }
-    }
-}
-
 //rsponsive ratio
-@mixin responsive-ratio($x,$y, $pseudo: false) {
-    $padding: unquote( ( $y / $x ) * 100 + '%' );
-    @if $pseudo {
-        &:before {
-            @include pseudo($pos: relative);
-            width: 100%;
-            padding-top: $padding;
-        }
-    } @else {
-        padding-top: $padding;
+@mixin responsive-ratio($x, $y, $pseudo: false) {
+  $padding: unquote(($y / $x) * 100 + '%');
+  @if $pseudo {
+    &:before {
+      @include pseudo($pos: relative);
+      width: 100%;
+      padding-top: $padding;
     }
-}
-
-
-@mixin responsive-property() {
-    @content;
-    @each $size in sm, md, xl, lg {
-        &-#{$size} {
-            @include media-breakpoint-up($size) {
-                @content;
-            }
-        }
-    }
+  } @else {
+    padding-top: $padding;
+  }
 }
