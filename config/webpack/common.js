@@ -121,6 +121,7 @@ module.exports = (env) => {
       modules: ['node_modules'],
       alias: {
         '@': `${paths.src}/modules`,
+        assets: `${paths.root}/public`,
       },
     },
     plugins: [
