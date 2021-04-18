@@ -1,6 +1,6 @@
 {
   "name": "mira-template",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "scripts": {
     "build": "webpack --progress -c config/webpack/prod.js",
     "watch": "webpack --watch  --progress -c config/webpack/prod.js",
@@ -8,6 +8,10 @@
     "analyze": "webpack --analyze -c config/webpack/analyze.js",
     "type-check": "tsc --project tsconfig.json --pretty --noEmit",
     "lint": "eslint --ext ts --ext tsx"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Delave-las-Kure/project_teamplate_D"
   },
   "husky": {
     "hooks": {
