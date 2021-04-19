@@ -16,7 +16,9 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "assets/*": ["public/assets/*"],
+      "images/*": ["src/images/*"]
     },
   },
   "include": ["**/*.ts", "**/*.tsx"],
