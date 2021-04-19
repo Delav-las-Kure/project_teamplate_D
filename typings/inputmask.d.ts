@@ -1,1 +1,1 @@
-declare module 'inputmask';
+declare module 'inputmask'

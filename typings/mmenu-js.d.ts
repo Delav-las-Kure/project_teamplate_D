@@ -1,1 +1,1 @@
-declare module 'mmenu-js';
+declare module 'mmenu-js'
