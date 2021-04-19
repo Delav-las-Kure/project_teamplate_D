@@ -96,7 +96,7 @@ module.exports = (env) => {
         },
         {
           test: /\.wav$|\.mp3$|\.webm$|\.mp4$/,
-          exclude: [/fonts/, /img/],
+          exclude: [/fonts/, /images/],
           type: 'asset/resource',
           generator: {
             filename: 'media/[name].[hash][ext][query]',
@@ -104,7 +104,7 @@ module.exports = (env) => {
         },
         {
           test: /\.woff$|\.woff2$|\.svg$|\.eot$|\.ttf$/,
-          exclude: [/img/],
+          exclude: [/images/],
           type: 'asset/resource',
           generator: {
             filename: 'fonts/[name].[hash][ext][query]',
@@ -120,8 +120,9 @@ module.exports = (env) => {
       extensions: ['.mjs', '.js', '.jsx', '.ts', '.tsx', '.json'],
       modules: ['node_modules'],
       alias: {
-        '@': `${paths.src}/modules`,
-        assets: `${paths.root}/public`,
+        '@': `${paths.src}`,
+        images: `${paths.src}/images`,
+        assets: `${paths.root}/public/assets`,
       },
     },
     plugins: [
