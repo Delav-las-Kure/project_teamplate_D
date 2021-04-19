@@ -1,8 +1,10 @@
 const { merge } = require('webpack-merge')
 const common = require('./common.js')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const webpack = require('webpack')
 
 module.exports = merge(common('production'), {
+  mode: 'production',
   devtool: 'source-map',
   output: {
     publicPath: './',
@@ -40,6 +42,9 @@ module.exports = merge(common('production'), {
     new MiniCssExtractPlugin({
       filename: 'css/[name].[contenthash].css',
       chunkFilename: '[id].css',
+    }),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('production'),
     }),
   ],
 })

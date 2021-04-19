@@ -1,7 +1,10 @@
 const paths = require('../paths')
 const { merge } = require('webpack-merge')
 const common = require('./common.js')
+const webpack = require('webpack')
+
 const port = 8080
+
 const host = Object.values(require('os').networkInterfaces()).reduce(
   (r, list) =>
     r.concat(
@@ -28,6 +31,7 @@ class HookPlugin {
 }
 
 module.exports = merge(common('development'), {
+  mode: 'development',
   devServer: {
     static: paths.build,
     hot: false,
@@ -64,6 +68,9 @@ module.exports = merge(common('development'), {
           }${host}:${port}/webpack-dev-server/ \x1b[0m`
         )
       })
+    }),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('development'),
     }),
   ],
 })

@@ -1,16 +1,12 @@
 const path = require('path')
 const fs = require('fs')
-const webpack = require('webpack')
 const paths = require('../paths')
-
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = (env) => {
-  process.env.NODE_ENV = env
-  console.log(process.env.NODE_ENV)
+  console.log(env)
   return {
-    mode: env,
     devtool: 'eval-source-map',
     context: paths.root,
     entry: {
@@ -132,9 +128,6 @@ module.exports = (env) => {
             from: `${paths.public}/assets`,
           },
         ],
-      }),
-      new webpack.DefinePlugin({
-        'process.env.NODE_ENV': JSON.stringify(env),
       }),
       ...generateHtmlPlugins('src'),
     ],
