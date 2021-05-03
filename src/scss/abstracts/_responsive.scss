@@ -14,7 +14,8 @@ $container-max-widths: (
 
 @mixin make-container-max-width($max-width: $container-content-width) {
   max-width: $max-width + $grid-gutter-width;
-  @include make-container();
+  margin: 0 auto;
+  padding: 0 $grid-gutter-width / 2;
 }
 
 //rsponsive ratio
